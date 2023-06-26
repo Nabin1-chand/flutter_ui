@@ -19,7 +19,7 @@ class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
 
 class _CustomAppBarState extends State<CustomAppBar> {
   String dropdownvalue = 'August';
-  List<String> items = ['a,b', 'c', 'd'];
+  List<String> items = ['August', 'b', 'c', 'd'];
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -28,6 +28,9 @@ class _CustomAppBarState extends State<CustomAppBar> {
         const Icon(
           Icons.menu,
           size: 40,
+        ),
+        SizedBox(
+          width: 10,
         ),
         DropdownButton(
           value: dropdownvalue,
