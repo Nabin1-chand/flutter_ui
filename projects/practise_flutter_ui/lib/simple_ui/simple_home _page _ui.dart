@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:practise_flutter_ui/simple_ui/widgets/custom_app_bar.dart';
 import 'package:practise_flutter_ui/widget/modal_buttom_sheet.dart';
@@ -16,8 +18,8 @@ class _SimpleHomePageUIState extends State<SimpleHomePageUI>
   void initState() {
     super.initState();
     controller = BottomSheet.createAnimationController(this);
-    controller.duration = Duration(milliseconds: 750);
-    controller.reverseDuration = Duration(milliseconds: 750);
+    controller.duration = const Duration(milliseconds: 750);
+    controller.reverseDuration = const Duration(milliseconds: 750);
     controller.drive(CurveTween(curve: Curves.linear));
   }
 
@@ -49,7 +51,7 @@ class _SimpleHomePageUIState extends State<SimpleHomePageUI>
                   return ModalBottomSheet(context);
                 });
           },
-          child: Icon(
+          child: const Icon(
             Icons.add,
             color: Colors.white,
           ),

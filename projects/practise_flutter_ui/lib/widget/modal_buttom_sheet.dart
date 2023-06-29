@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practise_flutter_ui/simple_ui/screens/edit_task_screen.dart';
 
+// ignore: non_constant_identifier_names
 ModalBottomSheet(context) {
   return Stack(
     children: [
@@ -133,8 +134,10 @@ ModalBottomSheet(context) {
             radius: 35,
             child: IconButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => EditTaskScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => const EditTaskScreen()));
                 },
                 icon: const Icon(
                   Icons.edit,
@@ -271,7 +274,7 @@ class ReusableColumnWidget extends StatelessWidget {
         ),
         Text(
           title2,
-          style: TextStyle(fontWeight: FontWeight.w600),
+          style: const TextStyle(fontWeight: FontWeight.w600),
         ),
       ],
     );

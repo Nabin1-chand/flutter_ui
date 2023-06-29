@@ -24,19 +24,20 @@ class _AnimationScreenState extends State<AnimationScreen>
     _sizeAnimation = Tween<double>(begin: 50.0, end: 200.0).animate(
         CurvedAnimation(
             parent: _controller,
-            curve: Interval(0.0, 0.5, curve: Curves.decelerate)));
+            curve: const Interval(0.0, 0.5, curve: Curves.decelerate)));
     _colorAnimation =
         ColorTween(begin: Colors.blue, end: Colors.red).animate(_controller);
     _helloAnimation =
         Tween<double>(begin: 20.0, end: 0.0).animate(CurvedAnimation(
       parent: _controller,
-      curve: Interval(0.5, 0.7, curve: Curves.easeIn),
+      curve: const Interval(0.5, 0.7, curve: Curves.easeIn),
     ));
     _messageAnimation = Tween<Offset>(
-      begin: Offset(20.0, 0.0),
+      begin: const Offset(20.0, 0.0),
       end: Offset.zero,
     ).animate(CurvedAnimation(
-        parent: _controller, curve: Interval(0.7, 1.0, curve: Curves.ease)));
+        parent: _controller,
+        curve: const Interval(0.7, 1.0, curve: Curves.ease)));
     _controller.repeat(reverse: true);
   }
 
@@ -58,7 +59,7 @@ class _AnimationScreenState extends State<AnimationScreen>
           ]),
           child: SlideTransition(
             position: _messageAnimation,
-            child: Text('This is Aniamtion demo'),
+            child: const Text('This is Aniamtion demo'),
           ),
           builder: (context, child) {
             return Column(
@@ -72,7 +73,7 @@ class _AnimationScreenState extends State<AnimationScreen>
                     color: _colorAnimation.value ?? Colors.white,
                     child: FadeTransition(
                       opacity: _helloAnimation,
-                      child: Center(child: Text('Hello')),
+                      child: const Center(child: Text('Hello')),
                     )),
                 child ?? const SizedBox(),
               ],

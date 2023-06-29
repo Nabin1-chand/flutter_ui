@@ -38,7 +38,7 @@ class FirstFoodScreen extends StatelessWidget {
                   height: 20,
                 ),
                 const Text(
-                  'See resturant nearby by \adding loaction',
+                  'See resturant nearby by \nadding loaction',
                   style: TextStyle(
                     color: Colors.white,
                     height: 1.4,
@@ -55,8 +55,10 @@ class FirstFoodScreen extends StatelessWidget {
                           colors: [Colors.yellow, Colors.orange])),
                   child: MaterialButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => FoodHomescreen()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => const FoodHomescreen()));
                     },
                     minWidth: double.infinity,
                     child: const Text(

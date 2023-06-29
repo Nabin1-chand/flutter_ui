@@ -32,7 +32,7 @@ class _FoodHomescreenState extends State<FoodHomescreen> {
       appBar: AppBar(
         backgroundColor: Colors.grey[100],
         elevation: 0,
-        leading: Icon(null),
+        leading: const Icon(null),
         actions: [
           IconButton(
               onPressed: () {},
@@ -74,8 +74,8 @@ class _FoodHomescreenState extends State<FoodHomescreen> {
   Widget makeCategory({title}) {
     return Container(
       width: 120,
-      margin: EdgeInsets.only(right: 10),
-      decoration: BoxDecoration(),
+      margin: const EdgeInsets.only(right: 10),
+      decoration: const BoxDecoration(),
       child: Center(
         child: Text(
           title,

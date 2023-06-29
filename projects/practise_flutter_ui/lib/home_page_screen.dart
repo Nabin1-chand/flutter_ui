@@ -1,6 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:practise_flutter_ui/Animation/animation_screen.dart';
 import 'package:practise_flutter_ui/food_delivery/food_first_page_screen.dart';
+import 'package:practise_flutter_ui/mecon_ai/screens/mecon_ai_login_page.dart';
 import 'package:practise_flutter_ui/simple_ui/simple_home%20_page%20_ui.dart';
 import 'package:practise_flutter_ui/stack_card_ui/screens/card_home_page_screen.dart';
 import 'package:practise_flutter_ui/widget/card_widget.dart';
@@ -14,32 +16,41 @@ class HomePageScreen extends StatelessWidget {
     final list = [
       CardWidget(
         onTap: () {
-          print('log');
+          if (kDebugMode) {
+            print('log');
+          }
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => AnimationScreen()));
+              MaterialPageRoute(builder: (context) => const AnimationScreen()));
         },
         text: 'Animation',
       ),
       CardWidget(
         onTap: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (_) => FirstFoodScreen()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (_) => const FirstFoodScreen()));
         },
         text: 'Food Delivery',
       ),
       CardWidget(
         onTap: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (_) => SimpleHomePageUI()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (_) => const SimpleHomePageUI()));
         },
         text: 'Simple UI',
       ),
       CardWidget(
         onTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (_) => CardHomePage()));
+              context, MaterialPageRoute(builder: (_) => const CardHomePage()));
         },
         text: 'Card UI',
+      ),
+      CardWidget(
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (_) => const MeconLoginScreen()));
+        },
+        text: 'Mecon Ai',
       ),
     ];
 

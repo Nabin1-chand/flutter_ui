@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   final double height;
@@ -29,7 +27,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
           Icons.menu,
           size: 40,
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         DropdownButton(
@@ -47,13 +45,13 @@ class _CustomAppBarState extends State<CustomAppBar> {
             });
           },
         ),
-        Spacer(),
+        const Spacer(),
         CircleAvatar(
             radius: 25,
-            backgroundColor: Color.fromARGB(255, 161, 143, 149),
+            backgroundColor: const Color.fromARGB(255, 161, 143, 149),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(40),
-              child: Image(
+              child: const Image(
                 image: NetworkImage(
                   'https://content.fortune.com/wp-content/uploads/2018/07/gettyimages-961697338.jpg',
                 ),
