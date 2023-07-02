@@ -1,7 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:practise_flutter_ui/Animation/animation_screen.dart';
+import 'package:practise_flutter_ui/bmi_calculator/bmi_home_screen.dart';
 import 'package:practise_flutter_ui/food_delivery/food_first_page_screen.dart';
+import 'package:practise_flutter_ui/material3_design/screens/new_desgin_screen.dart';
 import 'package:practise_flutter_ui/mecon_ai/screens/mecon_ai_login_page.dart';
 import 'package:practise_flutter_ui/simple_ui/simple_home%20_page%20_ui.dart';
 import 'package:practise_flutter_ui/stack_card_ui/screens/card_home_page_screen.dart';
@@ -51,6 +53,20 @@ class HomePageScreen extends StatelessWidget {
               MaterialPageRoute(builder: (_) => const MeconLoginScreen()));
         },
         text: 'Mecon Ai',
+      ),
+      CardWidget(
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (_) => const NewScreenDesign()));
+        },
+        text: 'Material 3',
+      ),
+      CardWidget(
+        onTap: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (_) => const BmiHomScreen()));
+        },
+        text: 'Bmi_calculator',
       ),
     ];
 
