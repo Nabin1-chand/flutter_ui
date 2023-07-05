@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:practise_flutter_ui/animation/basic/animated_container.dart';
 import 'package:practise_flutter_ui/animation/basic/animation_builder.dart';
+import 'package:practise_flutter_ui/animation/basic/animation_controller.dart';
+import 'package:practise_flutter_ui/animation/basic/custom_tween.dart';
+import 'package:practise_flutter_ui/animation/basic/tween_sequence.dart';
 
 class Demo {
   final String name;
@@ -14,7 +17,11 @@ final basicDemo = [
     name: 'Animation Builder',
     pageToNavigate: const AnimationBuilderDemo(),
   ),
-  Demo(name: 'Animated Container', pageToNavigate: AnimatedContainerDemo())
+  Demo(name: 'Animated Container', pageToNavigate: AnimatedContainerDemo()),
+  Demo(
+      name: 'Animation Controller ', pageToNavigate: AnimationControllerDemo()),
+  Demo(name: 'Custom Tween', pageToNavigate: CustomTweenDemo()),
+  Demo(name: 'Tween Sequence', pageToNavigate: TweenSequenceDemo())
 ];
 
 class AnimationDemo extends StatelessWidget {

@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:practise_flutter_ui/Animation/animation_screen.dart';
+import 'package:practise_flutter_ui/animated_stack/animation_stack.dart';
 import 'package:practise_flutter_ui/animation/animation_demo_screen.dart';
 import 'package:practise_flutter_ui/animation/basic/animation_builder.dart';
 import 'package:practise_flutter_ui/bmi_calculator/bmi_home_screen.dart';
@@ -61,6 +62,12 @@ class HomePageScreen extends StatelessWidget {
           onTap: () {
             Navigator.push(
                 context, MaterialPageRoute(builder: (_) => AnimationDemo()));
+          }),
+      CardWidget(
+          text: 'CustomStack',
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (_) => CustomStackAnimation()));
           }),
       CardWidget(
         onTap: () {
