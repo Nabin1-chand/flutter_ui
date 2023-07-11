@@ -9,7 +9,7 @@ class CustomStackAnimation extends StatefulWidget {
 }
 
 class _CustomStackAnimationState extends State<CustomStackAnimation> {
-  bool _isPositionedRight = false;
+  bool _isPositionedRight = true;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class _CustomStackAnimationState extends State<CustomStackAnimation> {
                   padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Container(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 10),
+                        horizontal: 30, vertical: 20),
                     decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(

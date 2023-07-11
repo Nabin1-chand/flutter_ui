@@ -2,9 +2,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:practise_flutter_ui/Animation/animation_screen.dart';
 import 'package:practise_flutter_ui/animated_stack/animation_stack.dart';
+import 'package:practise_flutter_ui/animated_stack/swipe_card.dart';
 import 'package:practise_flutter_ui/animation/animation_demo_screen.dart';
 import 'package:practise_flutter_ui/animation/basic/animation_builder.dart';
+import 'package:practise_flutter_ui/bloc/dummydata_event_screen.dart';
+import 'package:practise_flutter_ui/bloc1/bloc_screen/bloc_ui_screen.dart';
 import 'package:practise_flutter_ui/bmi_calculator/bmi_home_screen.dart';
+import 'package:practise_flutter_ui/bloc/counter_event.dart';
 import 'package:practise_flutter_ui/food_delivery/food_first_page_screen.dart';
 import 'package:practise_flutter_ui/material3_design/screens/new_desgin_screen.dart';
 import 'package:practise_flutter_ui/mecon_ai/screens/mecon_ai_login_page.dart';
@@ -60,29 +64,44 @@ class HomePageScreen extends StatelessWidget {
       CardWidget(
           text: 'Animation',
           onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (_) => AnimationDemo()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (_) => const AnimationDemo()));
           }),
       CardWidget(
           text: 'CustomStack',
           onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (_) => CustomStackAnimation()));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => const CustomStackAnimation()));
           }),
       CardWidget(
         onTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (_) => const BmiHomScreen()));
+              context, MaterialPageRoute(builder: (_) => const SwipeCard()));
         },
-        text: 'Bmi_calculator',
+        text: 'Swipe Card',
       ),
+      CardWidget(
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (_) => const DummyDataEventScreen()));
+        },
+        text: 'cubit ',
+      ),
+      CardWidget(
+          text: 'Bloc',
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (_) => const ProductUiScreen()));
+          })
     ];
 
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20.0),
         child: GridUsingColumnRow(
-          columns: 3,
+          columns: 2,
           itemBuilder: (BuildContext context, int index) => list[index],
           itemCount: list.length,
         ),
