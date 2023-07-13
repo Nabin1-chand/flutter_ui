@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:practise_flutter_ui/bloc1/controller/product_repositery.dart';
 import 'package:practise_flutter_ui/bloc1/event/product_event.dart';

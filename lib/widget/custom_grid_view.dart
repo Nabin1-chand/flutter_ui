@@ -20,6 +20,7 @@ class GridUsingColumnRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var reminder = itemCount % columns;
     return Column(
       children: [
         for (int i = 0; i < itemCount; i = i + columns)
@@ -46,6 +47,9 @@ class GridUsingColumnRow extends StatelessWidget {
               ],
             ),
           ),
+        for (var j = 0; j < reminder; j++) ...[
+          const SizedBox.shrink(),
+        ]
       ],
     );
   }
