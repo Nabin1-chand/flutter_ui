@@ -4,14 +4,11 @@ import 'package:practise_flutter_ui/Animation/animation_screen.dart';
 import 'package:practise_flutter_ui/animated_stack/animation_stack.dart';
 import 'package:practise_flutter_ui/animated_stack/swipe_card.dart';
 import 'package:practise_flutter_ui/animation/animation_demo_screen.dart';
-import 'package:practise_flutter_ui/animation/basic/animation_builder.dart';
 import 'package:practise_flutter_ui/bloc/dummydata_event_screen.dart';
 import 'package:practise_flutter_ui/bloc1/bloc_screen/bloc_ui_screen.dart';
 import 'package:practise_flutter_ui/bloc_counter_theme_data/appview.dart';
-import 'package:practise_flutter_ui/bmi_calculator/bmi_home_screen.dart';
-import 'package:practise_flutter_ui/bloc/counter_event.dart';
+import 'package:practise_flutter_ui/date_picker/date_picker.dart';
 import 'package:practise_flutter_ui/food_delivery/food_first_page_screen.dart';
-import 'package:practise_flutter_ui/material3_design/screens/new_desgin_screen.dart';
 import 'package:practise_flutter_ui/mecon_ai/screens/mecon_ai_login_page.dart';
 import 'package:practise_flutter_ui/simple_ui/simple_home%20_page%20_ui.dart';
 import 'package:practise_flutter_ui/stack_card_ui/screens/card_home_page_screen.dart';
@@ -102,12 +99,12 @@ class HomePageScreen extends StatelessWidget {
             Navigator.push(
                 context, MaterialPageRoute(builder: (_) => const AppView()));
           }),
-      // CardWidget(
-      //     text: 'Counter_ theme',
-      //     onTap: () {
-      //       Navigator.push(
-      //           context, MaterialPageRoute(builder: (_) => const AppView()));
-      //     })
+      CardWidget(
+          text: "Data Picker",
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (_) => const DatePickerScreen()));
+          })
     ];
 
     return Scaffold(
